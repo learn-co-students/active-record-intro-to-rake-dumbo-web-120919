@@ -7,9 +7,9 @@ describe "Rakefile" do
     load File.expand_path("../../Rakefile", __FILE__)
   end
 
-  describe 'namespace :greeting' do
-    describe 'greeting:hello' do
-      it "should print out 'hello from Rake!'" do
+  desc 'namespace :greeting' do
+    desc 'greeting:hello' do
+      put 'hello from Rake!'" do
         expect($stdout).to receive(:puts).with("hello from Rake!")
         Rake::Task["greeting:hello"].invoke
       end
